@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import CartProvider from "@/components/Providers";
 import ShoppingCart from "@/components/ShoppingCart";
+import DrawerCart from "@/components/Drawer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <CartProvider>
           <Navbar/>
           <ShoppingCart/>
+          <DrawerCart/>
           {children}
         </CartProvider>
       </body>

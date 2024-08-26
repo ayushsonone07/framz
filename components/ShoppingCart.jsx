@@ -10,10 +10,17 @@ import { useShoppingCart } from "use-shopping-cart"
 
 export default function ShoppingCart() {
 
-    const {cartCount} = useShoppingCart();
+    const {cartCount,
+      shouldDisplayCart,
+      handleCartClick,
+      cartDetails,
+      removeItem,
+      totalPrice,
+      redirectToCheckout} = useShoppingCart();
     return(
-        <Sheet>
+        <Sheet open={shouldDisplayCart} onOpenChange={() => handleCartClick()}>
             <SheetContent>
+
                 <SheetHeader>
                     <SheetTitle>Shopping Cart</SheetTitle>
                 </SheetHeader>

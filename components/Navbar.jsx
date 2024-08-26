@@ -18,8 +18,17 @@ export default function Navbar(){
 
     const pathname = usePathname();
     const { handleCartClick } = useShoppingCart();
-    // const cart = useShoppingCart();
-    console.log(handleCartClick);
+
+    const toggleCart = () => {
+        try {
+          handleCartClick();
+        } catch (error) {
+          console.error('Error toggling cart:', error);
+        }
+    };
+
+    // console.log(handleCartClick);
+    
     return(
         <header className="mb-8 bottom-b">
             <div className="flex items-center justify-between mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl">
@@ -45,8 +54,8 @@ export default function Navbar(){
 
                 <nav className="flex divide-x border-r sm:border-l">
                     <Button 
-                        variant={'outline'} 
-                        onClick={() => handleCartClick()}
+                        // variant={'outline'} 
+                        onClick={() => toggleCart()}
                         className="flex flex-col gap-y-1.5 h-12 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24 rounded-none"
                     >
                         <ShoppingBag />
