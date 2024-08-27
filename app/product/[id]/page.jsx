@@ -57,10 +57,10 @@ export default async function productPage({params}) {
                         <div className="mb-4">
                             <div className="flex items-end gap-2">
                                 <span className="text-xl font-bold text-gray-800 md:text-2xl">
-                                ${data?.price}
+                                ₹{data?.price}
                                 </span>
                                 <span className="mb-0.5 text-red-500 line-through">
-                                ${data?.price + 30}
+                                ₹{data?.price + 30}
                                 </span>
                             </div>
 
@@ -75,15 +75,15 @@ export default async function productPage({params}) {
                         </div>
 
                         <div className="flex gap-2.5">
-                            <AddToBag
-                                currency="USD"
+                            {/* <AddToBag
+                                currency="INR"
                                 description={data.description}
                                 image={data.images[0]}
                                 name={data.name}
                                 price={data.price}
                                 key={data._id}
                                 price_id={data.price_id}
-                            />
+                            /> */}
                             {/* <CheckoutNow
                                 currency="USD"
                                 description={data.description}
