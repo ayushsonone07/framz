@@ -52,14 +52,14 @@ export default function Navbar(){
                     ))}
                 </nav>
 
-                <nav className="flex divide-x border-r sm:border-l">
+                <nav className="flex">
                     <Button 
                         // variant={'outline'} 
                         onClick={() => toggleCart()}
-                        className="flex flex-col gap-y-1.5 h-12 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24 rounded-none"
+                        className="flex flex-col gap-y-1.5 h-12 w-12 sm:h-20 sm:w-20 md:h-20 md:w-20 mt-1 rounded-sm"
                     >
                         <ShoppingBag />
-                        <span className="hidden text-xs font-semibold text-gray-500 sm:block ">Cart</span>
+                        <span className="hidden text-xs font-semibold text-white sm:block ">Cart</span>
                     </Button>
                 </nav>
             </div>
