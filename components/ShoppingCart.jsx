@@ -7,6 +7,7 @@ import {
     SheetTitle,
   } from "@/components/ui/sheet"
 import { useShoppingCart } from "use-shopping-cart"
+import Image from "next/image";
 
 export default function ShoppingCart() {
 
@@ -48,7 +49,7 @@ export default function ShoppingCart() {
                                         <div>
                                           <div className="flex justify-between text-base font-medium text-gray-900">
                                             <h3>{entry.name}</h3>
-                                            <p className="ml-4">${entry.price}</p>
+                                            <p className="ml-4">₹{entry.price}</p>
                                           </div>
                                           <p className="mt-1 text-sm text-gray-500 line-clamp-2">
                                             {entry.description}

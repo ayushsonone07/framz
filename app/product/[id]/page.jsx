@@ -75,7 +75,7 @@ export default async function productPage({params}) {
                         </div>
 
                         <div className="flex gap-2.5">
-                            {/* <AddToBag
+                            <AddToBag
                                 currency="INR"
                                 description={data.description}
                                 image={data.images[0]}
@@ -83,7 +83,7 @@ export default async function productPage({params}) {
                                 price={data.price}
                                 key={data._id}
                                 price_id={data.price_id}
-                            /> */}
+                            />
                             {/* <CheckoutNow
                                 currency="USD"
                                 description={data.description}
