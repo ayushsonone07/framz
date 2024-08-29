@@ -3,7 +3,7 @@ import { client } from "../lib/sanity";
 import Image from "next/image";
 
 async function getData(category) {
-    const query = `*[_type == "product" && category->name == "${category}"] {
+    const query = `*[_type == "product" && category->name == '${category}'] {
         _id,
         "imageUrl": images[0].asset->url,
         price,
@@ -11,17 +11,16 @@ async function getData(category) {
         "slug": slug.current,
         "categoryName": category->name
         }`;
-        
+
     const data = await client.fetch(query);
-    console.log(data);
-    
+    // console.log(data)
     return data;
 }
 
 
 export default async function categoryPage({params}) {
     const data = await getData(params.category);
-
+    
     return (
         <div className="bg-white">
             <div className="mx-auto max-w-2xl px-4 sm:px-6  lg:max-w-7xl lg:px-8">

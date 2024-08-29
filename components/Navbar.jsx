@@ -40,11 +40,11 @@ export default function Navbar(){
                     {links.map((link, id)=>(
                         <div key={id}>
                             {pathname === link.href ? (
-                                <Link className="text-lg text-blue-500 font-semibold text-primary" href={link.href}>
+                                <Link className="text-lg font-semibold text-black text-primary" href={link.href}>
                                     {link.name}
                                 </Link>
                             ) : (
-                                <Link href={link.href} className="text-lg font-semibold text-gray-600 duration-100 hover:text-primary">
+                                <Link href={link.href} className="text-lg font-semibold text-gray-500 duration-100 hover:text-primary">
                                     {link.name}
                                 </Link>
                             )}
