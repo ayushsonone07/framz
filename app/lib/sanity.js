@@ -11,5 +11,5 @@ export const client = createClient({
 const builder = imageUrlBuilder(client)
 
 export function urlFor(source){
-    return builder.image(source)
+    return builder.image(source).width(800).quality(80).auto('format')
 }
