@@ -23,7 +23,6 @@ async function gaetData(id) {
     return data
 }
 
-export const dynamic = 'force-dynamic'
 
 export default async function productPage({params}) {
     const data = await gaetData(params.id)
